@@ -63,7 +63,7 @@ class GitHubOAuthHandler(RequestHandler):
                     code=code
             )
             
-            url = url_concat(self._OAUTH_ACCESS_TOKEN_URL,
+            url = url_concat("https://github.com/login/oauth/access_token",
                              params)
             
             req = HTTPRequest(url,
